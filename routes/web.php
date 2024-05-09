@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/series', [PageController::class, 'series']);
-Route::get('/anime', [PageController::class, 'anime']);
+Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('/series', [PageController::class, 'series'])->name('series');
+Route::get('/anime', [PageController::class, 'anime'])->name('anime');

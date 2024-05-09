@@ -9,8 +9,10 @@ use App\Models\Movie;
 class PageController extends Controller
 {
     public function index(){
-        dd(Movie::all());
-        return view('guest.film');
+
+        $movies = Movie::orderByDesc('id')->get();
+        /* dd(Movie::all()); */
+        return view('guest.film', compact('movies'));
     }
 
     public function series(){
