@@ -17,7 +17,14 @@
 
 <body>
 
-    <h1>Hello</h1>
+    @include('partials.header')
+
+    <main>
+        @yield('content')
+    </main>
+
+    @include('partials.footer')
+
 
 </body>
 
